@@ -1,0 +1,49 @@
+
+
+//Write your code here
+
+class Flower {
+        public String whats_Your_Name() {
+            String str = "I have many names and types";
+            return str;
+        }
+    }
+
+class Jasmine extends Flower{
+    public String whats_Your_Name() {
+            String str = "Jasmine";
+            return str;
+        }
+}
+class Lily extends Flower{
+    public String whats_Your_Name() {
+            String str = "Lily";
+            return str;
+        }
+}
+class Lotus extends Flower{
+    public String whats_Your_Name() {
+            String str = "Lotus";
+            return str;
+        }
+}
+class State{
+    public Flower your_National_Flower(){
+            return new Flower();
+    }
+}
+class WestBengal extends State{
+    public Jasmine your_National_Flower(){
+            return new Jasmine();
+    }
+}
+class Karnataka extends State{
+    public Lotus your_National_Flower(){
+            return new Lotus();
+    }
+}
+class AndhraPradesh extends State{
+    public Lily your_National_Flower(){
+            return new Lily();
+    }
+}
