@@ -1,0 +1,49 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int n = Integer.parseInt(sc.nextLine());
+        String input = sc.nextLine();
+        List<Integer> l = new ArrayList<Integer>();
+        StringTokenizer st = new StringTokenizer(input," ");
+        while(st.hasMoreTokens()){
+          int x = Integer.parseInt(st.nextToken());
+
+          l.add(x);
+        }
+        int q = Integer.parseInt(sc.nextLine());
+
+        int z = 0;
+        while(z < q){
+
+          String op = sc.nextLine();
+          if(op.equalsIgnoreCase("insert")){
+
+            String input1 = sc.nextLine();
+            String[] q1 = input1.split(" ");
+            int pos = Integer.parseInt(q1[0]);
+            int value = Integer.parseInt(q1[1]);
+            l.add(pos, value);
+            z++;
+          }else if(op.equalsIgnoreCase("delete")){
+
+            int val = Integer.parseInt(sc.nextLine());
+
+            int y = l.remove(val);
+            z++;
+          }
+       }
+        Iterator itr = l.iterator();
+        while(itr.hasNext()) {
+          Object element = itr.next();
+          System.out.print(element + " ");
+       }
+    }
+}
